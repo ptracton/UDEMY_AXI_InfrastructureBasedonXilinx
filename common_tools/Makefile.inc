@@ -21,7 +21,7 @@ modelsim:
 	$(MODELSIM) -c -do $(MODULE)_modelsim.f
 
 lint:
-	$(LINTER) --lint-only  -I../ $(MODULE).v  $(LINT_FILES)
+	$(LINTER) --lint-only  -I../ -I../../common_tools  $(MODULE).v  $(LINT_FILES)
 
 
 synthesis:
@@ -29,4 +29,3 @@ synthesis:
 
 clean:
 	@$(RM) -rf *.vcd *~  a.out vsim.wlf work/ transcript auto *.tex _minted-$(MODULE)/ xrun.history xrun.log  xcelium.d/ $(MODULE).tex $(MODULE).pygmented _minted-$(MODULE)/ auto/ $(MODULE)_yosys.log $(MODULE)_iverilog.log $(MODULE)_xilinx_synth.v *.dot *.pid dump.shm/
-
