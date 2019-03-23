@@ -19,12 +19,14 @@ module axis_m ( input areset_n,
 			);
 
 
+/* -----\/----- EXCLUDED -----\/-----
 reg [31:0] data_buf; // buffer to keep the send data from change
 always @ (posedge send or negedge areset_n)
 	if (~areset_n)
 		data_buf <= 0;
 	else
 		data_buf <= data;
+ -----/\----- EXCLUDED -----/\----- */
 
 reg send_pulse_1d,send_pulse_2d;
 // just delay the send signal
@@ -47,7 +49,7 @@ always @ (posedge aclk)
 		if (handshake)
 			tdata <= 0;
 		else if (send_pulse_1d)
-				tdata <= data_buf;
+				tdata <= data;
 			else
 				tdata <= tdata;
 

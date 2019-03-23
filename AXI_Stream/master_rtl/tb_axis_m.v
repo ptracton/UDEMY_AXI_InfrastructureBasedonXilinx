@@ -104,18 +104,9 @@ module tb_axis_m (/*AUTOARG*/ ) ;
    test_tasks test_tasks();
 
    //
-   // Store results in waveform viewer format
+   // dump to wveform viewer
    //
-   initial
-     begin
-`ifdef NCVERILOG
-	    $shm_open("dump.shm");
-	    $shm_probe(tb_fifo, "MAC");
-`else
-	    $dumpfile("dump.vcd");
-	    $dumpvars(0, `TB);
-`endif
-     end // initial begin
+   dump dump();
 
 
 endmodule // tb_axis_m
