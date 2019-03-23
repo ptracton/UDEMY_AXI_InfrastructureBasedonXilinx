@@ -2,8 +2,7 @@
 // Takes the data and sends it through the AXIS interface
 // When send posedge happens, sends the data
 
-
-`timescale 1us/1us
+`include "timescale.v"
 
 module axis_m ( input areset_n,
 				input aclk,

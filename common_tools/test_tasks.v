@@ -8,6 +8,8 @@
 // Update Count    : 0
 // Status          : Unknown, Use with caution!
 
+`include "timescale.v"
+`include "setup.v"
 
 module test_tasks (/*AUTOARG*/ ) ;
 
@@ -19,14 +21,22 @@ module test_tasks (/*AUTOARG*/ ) ;
 
    always @(posedge test_passed) begin
       $display("--------------------------------------------------------------------------------------------");
+`ifdef MODELSIM_GUI
+      $display("\n\n TEST PASSED   @ %d", $time);
+`else
       $display("\n\n\033[1;32mTEST PASSED\033[0m  @ %d", $time);
+`endif
       #100 $finish;
 
    end
 
    always @(posedge test_failed) begin
       $display("--------------------------------------------------------------------------------------------");
+`ifdef MODELSIM_GUI
+      $display("\n ***** TEST FAILED ***** @ %d\n", $time);
+`else
       $display("\n\033[1;31m***** TEST FAILED *****\033[0m @ %d\n", $time);
+`endif
       #100 $finish;
 
    end
@@ -118,9 +128,17 @@ module test_tasks (/*AUTOARG*/ ) ;
 
       begin
          if (test_case_fail) begin
+`ifdef MODELSIM_GUI
+            pass_fail = " FAIL ";
+`else
             pass_fail = "\033[1;31mFAIL\033[0m";
+`endif
          end else begin
+`ifdef MODELSIM_GUI
+            pass_fail = " PASS ";
+`else
             pass_fail = "\033[1;32mPASS\033[0m";
+`endif
          end
 
          // left justify string

@@ -8,9 +8,9 @@
 // Update Count    : 0
 // Status          : Unknown, Use with caution!
 
-`define TB tb_axis_m
-`define NUMBER_OF_TESTS 2
+`include "timescale.v"
 
+`include "setup.v"
 `include "test_axi_include.v"
 
 
@@ -106,7 +106,8 @@ module tb_axis_m (/*AUTOARG*/ ) ;
    //
    // dump to wveform viewer
    //
+`ifndef MODELSIM_GUI
    dump dump();
-
+`endif
 
 endmodule // tb_axis_m
