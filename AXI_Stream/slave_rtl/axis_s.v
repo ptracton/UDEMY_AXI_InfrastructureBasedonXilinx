@@ -6,16 +6,17 @@
 `timescale 1us/1us
 
 module axis_s (
-			  input areset_n, aclk, 
-			  output reg [31:0] 	data, 		// data that axis slave will receive
-			  input 				ready,		// user app is ready to accept data, so slave can receive a data
+			  input             areset_n,
+              input             aclk,
+			  output reg [31:0] data, // data that axis slave will receive
+			  input             ready, // user app is ready to accept data, so slave can receive a data
 			  
-			  output reg 			tready, 
-              input  				tvalid,
-			  input 				tlast, 
-			  input [31:0] 			tdata,
+			  output reg        tready,
+              input             tvalid,
+			  input             tlast,
+			  input [31:0]      tdata,
 			 
-			  output reg 			finish		// transaction is completed
+			  output reg        finish		// transaction is completed
 			);
 
 // handshake happened between master and slave
