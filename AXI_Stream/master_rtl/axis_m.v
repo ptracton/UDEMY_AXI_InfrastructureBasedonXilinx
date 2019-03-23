@@ -42,7 +42,7 @@ assign handshake  = tvalid & tready;
 // tdata
 always @ (posedge aclk)
     if (~areset_n)
-        tdata <= 1'b0;
+        tdata <= 32'b0;
 	else
 		if (handshake)
 			tdata <= 0;
