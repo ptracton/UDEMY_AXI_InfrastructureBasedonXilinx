@@ -1,1 +1,7 @@
 *.vcd
+*.log
+a.out
+*.wlf
+transcript
+work
+*_xilinx_synth.v

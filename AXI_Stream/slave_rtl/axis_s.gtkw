@@ -1,0 +1,72 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Sat Mar 23 22:33:34 2019
+[*]
+[dumpfile] "(null)"
+[savefile] "/home/ptracton/ptracton/src/hardware/UDEMY_AXI_InfrastructureBasedonXilinx/AXI_Stream/slave_rtl/axis_s.gtkw"
+[timestart] 17
+[size] 1920 1023
+[pos] -1 -1
+*-3.683692 56 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_axis_s.
+[sst_width] 208
+[signals_width] 264
+[sst_expanded] 1
+[sst_vpaned_height] 291
+@200
+-TB
+@28
+tb_axis_s.aclk
+tb_axis_s.areset_n
+@22
+tb_axis_s.data[31:0]
+@28
+tb_axis_s.finish
+tb_axis_s.send
+@29
+tb_axis_s.slave_finish
+@28
+tb_axis_s.slave_ready
+@22
+tb_axis_s.tdata[31:0]
+tb_axis_s.slave_data[31:0]
+@28
+tb_axis_s.tlast
+tb_axis_s.tready
+tb_axis_s.tvalid
+@200
+-MASTER
+@28
+tb_axis_s.inst_axis_m.aclk
+tb_axis_s.inst_axis_m.areset_n
+@22
+tb_axis_s.inst_axis_m.data[31:0]
+@28
+tb_axis_s.inst_axis_m.finish
+tb_axis_s.inst_axis_m.handshake
+tb_axis_s.inst_axis_m.send
+tb_axis_s.inst_axis_m.send_pulse_1d
+tb_axis_s.inst_axis_m.send_pulse_2d
+@22
+tb_axis_s.inst_axis_m.tdata[31:0]
+@28
+tb_axis_s.inst_axis_m.tlast
+tb_axis_s.inst_axis_m.tready
+tb_axis_s.inst_axis_m.tvalid
+@200
+-SLAVE
+@28
+tb_axis_s.inst_axis_s.aclk
+tb_axis_s.inst_axis_s.areset_n
+@22
+tb_axis_s.inst_axis_s.tdata[31:0]
+tb_axis_s.inst_axis_s.data[31:0]
+@28
+tb_axis_s.inst_axis_s.handshake
+tb_axis_s.inst_axis_s.finish
+tb_axis_s.inst_axis_s.ready
+tb_axis_s.inst_axis_s.tlast
+tb_axis_s.inst_axis_s.tready
+tb_axis_s.inst_axis_s.tvalid
+[pattern_trace] 1
+[pattern_trace] 0
